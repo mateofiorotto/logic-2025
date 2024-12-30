@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // Ejercicio 11) Dados los siguientes datos: nombre del empleado, cantidad de horas trabajadas y precio por hora de trabajo, se desea calcular el sueldo del empleado, según las siguientes consideraciones: si trabajo más de 160 horas, se adiciona al cálculo un premio de $ 3000. Imprimir el nombre del empleado y el sueldo que le corresponde.
+
+        let empleados = ["Mateo", "Juan"];
+        let cantidadHoras = [165, 100];
+        let precioHora = [1000, 500];
+
+        function calcularSueldo(){
+            let sueldoTotal = [];
+            for (let i = 0; i < empleados.length; i++) { 
+                sueldoTotal[i] = cantidadHoras[i] * precioHora[i];
+
+                if (cantidadHoras[i] > 160) {
+                    sueldoTotal[i] += 3000;
+                }
+            }
+
+            for (let i = 0; i < empleados.length; i++) {
+            document.body.innerHTML += "<h1>" + (empleados[i] + " - Sueldo: $" + sueldoTotal[i]) + "</h1>";
+            }
+            
+        }
+
+        calcularSueldo();
+
+
+
+
+    </script>
+</body>
+
+</html>

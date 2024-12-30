@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // Una casa de video juegos otorga un descuento dependiendo del importe de la
+        // compra realizada según los siguientes valores:
+        // • Si el importe es menor a ARS 1000, no hay descuento.
+        // • Si el importe es ARS 1000 o más pero menor a ARS 5000, aplica un
+        // descuento del 10%.
+        // • Si el importe es ARS 5000 o más, aplica un descuento del 18%.
+        // Hacer un programa para ingresar un importe de venta y luego muestre por
+        // pantalla el importe final con el descuento que corresponda.
+
+        let importe = parseFloat(prompt('Ingresar importe de la compra:'))
+
+     function determinarDescuento() {
+           
+            if (importe <= 0) {
+                rta = "No compraste nada / no puede haber importes negativos"
+            } else if (importe < 1000) {
+                rta = importe;
+            } else if (importe >= 1000 && importe < 5000) {
+                rta = importe - (importe * 0.1);
+            } else if (importe >= 5000) {
+                rta = importe - (importe * 0.18);
+            }
+
+            return rta;
+        }
+
+        document.body.innerHTML += "<h1>" + determinarDescuento() + "</h1>";
+
+        
+
+    </script>
+</body>
+
+</html>

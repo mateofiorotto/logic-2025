@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //Ejercicio 7) Algoritmo que convierta las longitudes del sistema inglés al sistema métrico decimal. Tener en cuenta que 1 milla = 1.609344 km 1 pie = 30.48 cm - 1 pulgada = 2.54 cm
+
+        //aca podriamos declarar valores para milla, pie y pulgada pero solo usaremos 1
+        let num = 6;
+
+        //se podria NO declarar constantes pero vamos a hacerlo en caso de que el programa "escale"
+        const millaAKm = 1.609344;
+        const pieACm = 30.48;
+        const pulgadaACm = 2.54;
+
+        function convertirMedidas(){
+
+            return `
+                ${num} milla(s) son: ${num * millaAKm} km <br>
+                ${num} pie(s) son: ${num * pieACm} cm <br>
+                ${num} pulgada(s) son: ${num * pulgadaACm} cm
+            `;
+        }
+
+        document.body.innerHTML += "<h1>" + convertirMedidas() + "</h1>";
+
+
+    </script>
+</body>
+
+</html>

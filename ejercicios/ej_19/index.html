@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+// Hacer un programa que solicite el ingreso de las notas del primer parcial y del
+// segundo parcial de una alumna de programación. El programa deberá analizar
+// las notas y emitir la situación de la alumna según la siguiente escala:
+// a. Si tiene 8 o más en ambos parciales, emitir “aprobación directa”.
+// b. Si no tiene 8 o más en ambos pero tiene aprobados ambos parciales (se
+// aprueba con 6 o más), emitir “rinde examen final”.
+// c. Si tiene menos de 6 en alguno de los dos parciales, emitir “debe recuperar”.
+// El programa debe emitir solo un cartel, el que corresponda.
+
+        let nota1 = parseFloat(prompt('Nota 1: '))
+        let nota2 = parseFloat(prompt('Nota 2:'))
+        function determinarCondicionAlumno() {
+            let condicion;
+
+            if (nota1 >= 8 && nota2 >= 8) {
+                condicion = "Promocionado";
+            } else if (nota1>=6 && nota2>=6){
+                condicion = "aprobaste, pero vas a final"
+            } else if (nota1<6 || nota2 < 6) {
+                condicion = "recuperas";
+            }
+
+            return condicion;
+        }
+
+        document.body.innerHTML += "<h1>" + determinarCondicionAlumno() + "</h1>";
+
+    </script>
+</body>
+
+</html>

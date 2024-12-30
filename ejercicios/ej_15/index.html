@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // Hacer un programa para ingresar un número y luego se emita un cartel por
+        // pantalla “Positivo” si el número es mayor a cero, “Negativo” si el número es menor a cero o “Cero” si el número es igual a cero.
+        // Nota: requiere más de in IF!
+
+        let num = prompt('Ingresar numero:')
+
+     function determinarNumero() {
+            if (num>0) {
+                rta = "positivo"
+            } else if (num<0) {
+                rta = "negativo"
+            } else {
+                rta = "cero";
+            }
+            return rta;
+        }
+
+        document.body.innerHTML += "<h1>" + determinarNumero() + "</h1>";
+
+        
+
+    </script>
+</body>
+
+</html>

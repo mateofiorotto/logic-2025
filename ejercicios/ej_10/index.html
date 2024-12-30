@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // Ejercicio 10)  En un curso de la Facultad la calificación final del estudiante se determina a partir del rendimiento en tres aspectos del trabajo cuatrimestral. Existe una calificación de exámenes parciales, que cuenta con un 30 por ciento del total; la calificación del trabajo en taller con 20 por ciento del total, y el examen final con el 50 por ciento restante. Diseñar un algoritmo para calcular la calificación final del estudiante.
+
+        const PorcentajeFinal = 0.50;
+        const PorcentajeParcial = 0.30;
+        const PorcentajeTaller = 0.20
+
+        let notaFinal = 5;
+        let notaParcial = 9;
+        let notaTaller = 8;
+
+        function calcular(){
+            let promedio = notaFinal * PorcentajeFinal + notaParcial * PorcentajeParcial + notaTaller * PorcentajeTaller;
+            
+            return promedio;
+        }
+
+        document.body.innerHTML += "<h1>RTA: " + calcular() + "</h1>";
+
+
+    </script>
+</body>
+
+</html>

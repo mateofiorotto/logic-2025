@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // Hacer un programa que permita ingresar los kilómetros existentes entre dos
+        // ciudades y la velocidad promedio de un vehículo. Calcular y emitir por pantalla
+        // el tiempo aproximado que demandará llegar de un punto a otro teniendo en
+        // cuenta los datos ingresados.
+
+        let kilometros = prompt('Ingrese km de distancia: ');
+        let velocidadVehiculo = prompt('A cuanta velocidad va el auto?:')
+        function calcularTiempo() {
+            let tiempo = kilometros / velocidadVehiculo;
+
+            return tiempo;
+        }
+
+        document.body.innerHTML += "<h1>" + calcularTiempo() + "hs</h1>";
+
+    </script>
+</body>
+
+</html>

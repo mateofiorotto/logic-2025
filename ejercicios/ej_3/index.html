@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // Ejercicio 3) Calcular el perímetro y la superficie de un rectángulo, dadas la base y la altura.
+        let base = 10;
+        let altura = 5;
+
+        //vars
+
+        function calcularPerimetro() {
+            let perimetro = 2 * (base + altura);
+            return perimetro;
+        }
+
+        function calcularSuperficie() {
+            let superficie = base * altura;
+            return superficie;
+        }
+
+        document.body.innerHTML += "<h1>" + calcularPerimetro() + "</h1>";
+        document.body.innerHTML += "<h1>" + calcularSuperficie() + "</h1>";
+
+
+    </script>
+</body>
+
+</html>

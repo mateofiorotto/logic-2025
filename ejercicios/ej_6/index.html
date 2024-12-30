@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //Ejercicio 6) Intercambiar los valores de 2 variables numéricas
+        let num = 6;
+        let num2 = 5;
+        let aux = 0;
+
+        function intercambiarNumeros(){
+            aux = num; //toma el valor de numero
+            num = num2; //num toma el valor de num2
+            num2 = aux; //num2 toma el valor del aux, que tomo el valor del numero
+            return "PRIMER NUM: " + num + "<BR>SEGUNDO NUM: " + num2;
+        }
+
+        document.body.innerHTML += "<h1>" + intercambiarNumeros() + "</h1>";
+
+
+    </script>
+</body>
+
+</html>

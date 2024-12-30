@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // Hacer un programa que permita ingresar el año actual y el año de la fecha de
+        // nacimiento de una persona y luego calcule y emita por pantalla su edad.
+        // Nota: no hay que tener en cuenta si la persona cumplió años o no,
+        // simplemente calcular.
+
+        let actualYear = prompt('Por favor, ingresa el año actual');
+
+        let birthYear = prompt('Por favor, ingresa año de nacimiento');
+
+        function calcularNacimiento() {
+            let nacimiento = actualYear - birthYear;
+
+            return nacimiento;
+        }
+
+        document.body.innerHTML += "<h1>" + calcularNacimiento() + "</h1>";
+
+    </script>
+</body>
+
+</html>

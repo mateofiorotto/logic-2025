@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // Una importante marca de computadoras permite elegir cierta configuración del
+        // equipo a comprar. Para ello existe la siguiente escala de precios:
+
+        //              i5 (1) i7 (2) i9 (3)
+        // 8 RAM (1)    USD 800 USD 900 USD 1200
+        // 16 RAM (2)   USD 900 USD 1000 USD 1400
+        // 32 RAM (3)   USD 1000 USD 1400 USD 2000
+
+        // Además, el equipo viene con un disco que permite almacenar 500 GB de
+        // información y que se puede ampliar a 1 TB si así lo desea, lo cual tiene un costo
+        // adicional de USD 300.
+        // Hacer un programa que solicite la opción de procesador, la opción de memoria
+        // RAM, y si extiende el disco o no (ingresa 1 para extender y 0 para no extender)
+        // y calcule y emita por pantalla el monto de la máquina seleccionada.
+
+        let procesador = parseFloat(prompt('Ingresar procesador (1 - i5, 2 - i7, 3 - i9):'))
+        let ram = parseFloat(prompt('Ingresar ram (1 - 8GB, 2 - 16GB, 3 - 32 GB):'))
+        let disco = parseFloat(prompt('Desea ampliar el disco (de 500gb pasa a 1tb)? 0 no, 1 si'))
+        function determinarPrecioPC() {
+            let precioMaquina = 0;
+
+            switch (procesador) {
+                //i5
+                case 1:
+                    switch (ram) {
+                        //i5 + 8ram
+                        case 1:
+                            precioMaquina += 800;
+                            break;
+                        //i5 + 16ram
+                        case 2:
+                            precioMaquina += 900;
+                            break;
+                        //i5 + 32ram
+                        case 3:
+                            precioMaquina += 1200;
+                            break;
+                    }
+                    break;
+                //i7
+                case 2:
+                    switch (ram) {
+                        //i5 + 8ram
+                        case 1:
+                            precioMaquina += 900;
+                            break;
+                        //i5 + 16ram
+                        case 2:
+                            precioMaquina += 1000;
+                            break;
+                        //i5 + 32ram
+                        case 3:
+                            precioMaquina += 1400;
+                            break;
+                    }
+                    break;
+                //i9
+                case 3:
+                    switch (ram) {
+                        //i5 + 8ram
+                        case 1:
+                            precioMaquina += 1000;
+                            break;
+                        //i5 + 16ram
+                        case 2:
+                            precioMaquina += 1400;
+                            break;
+                        //i5 + 32ram
+                        case 3:
+                            precioMaquina += 2000;
+                            break;
+                    }
+                    break;
+                default:
+                    precioMaquina = "error";
+                    break;
+            }
+
+            if (disco == 1) {
+                precioMaquina += 300;
+            }
+
+            return precioMaquina;
+        }
+
+        document.body.innerHTML += "<h1>" + determinarPrecioPC() + "</h1>";
+
+
+
+    </script>
+</body>
+
+</html>
